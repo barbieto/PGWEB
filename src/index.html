@@ -1,17 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>PGWEB</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Asistencias</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <main>
-    <h1>PGWEB</h1>
-  </main>
-</body>
+    <div class="container">
+        <h1>Registro de Asistencias</h1>
+        <form id="attendanceForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
 
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" required>
+
+            <button type="submit">Registrar Asistencia</button>
+        </form>
+
+        <h2>Listado de Asistencias</h2>
+        <table id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aquí se llenarán las filas de asistencia -->
+            </tbody>
+        </table>
+
+        <button id="downloadPDF">Descargar PDF</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
